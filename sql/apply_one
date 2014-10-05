@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DATABASE="cloud_bender"
+USERNAME="cloud"
+PASSWORD="Nebula15"
+FILE=$1
+
+echo -n "Process $FILE ... "
+mysql --database=$DATABASE --user=$USERNAME --password=$PASSWORD < $FILE
+echo "OK"

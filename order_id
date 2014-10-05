@@ -1,0 +1,12 @@
+#!/bin/ksh
+
+DATABASE="cloud_bender"
+USERNAME="cloud"
+PASSWORD="Nebula15"
+
+#SQL="SELECT ((YEAR(CURRENT_TIMESTAMP) - 2000) * 1000000) + (MONTH(CURRENT_TIMESTAMP) * 10000) + (DAY(CURRENT_TIMESTAMP) * 100) + 1"
+SQL="SELECT ((YEAR(CURRENT_TIMESTAMP) - 2000) * 10000) + (WEEK(CURRENT_TIMESTAMP) * 100) + 1"
+STAMP=`mysql --database=$DATABASE --user=$USERNAME --password=$PASSWORD --raw --silent --skip-column-names --execute="$SQL"`
+
+SQL="ALTER TABLE cloud_joomla.joomla_virtuemart_orders AUTO_INCREMENT = $STAMP"
+STAMP=`mysql --database=$DATABASE --user=$USERNAME --password=$PASSWORD --execute="$SQL"`

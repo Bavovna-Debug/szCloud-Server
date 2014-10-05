@@ -1,0 +1,10 @@
+$TTL <TTL>
+@ SOA <ROOT_SERVER>. <ADMIN>. (
+				<SERIAL>
+				<SOA_REFRESH>
+				<SOA_RETRY>
+				<SOA_EXPIRE>
+				<SOA_TTL> )
+
+$INCLUDE	<PATH>/<INCLUDE>
+

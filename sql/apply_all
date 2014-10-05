@@ -1,0 +1,23 @@
+#!/bin/sh
+
+./apply_one procurator.sql
+./apply_one scheduler.sql
+./apply_one bind.sql
+./apply_one bind_logger.sql
+./apply_one nimbus.sql
+./apply_one dns.sql
+./apply_one dns_journal.sql
+./apply_one dnssec.sql
+./apply_one ip.sql
+./apply_one dmac.sql
+./apply_one hash.sql
+./apply_one logo.sql
+./apply_one tables.sql
+./apply_one soa.sql
+./apply_one clouds.sql
+./apply_one domains.sql
+./apply_one hosts.sql
+./apply_one activation.sql
+./apply_one authorization.sql
+./apply_one procedures.sql
+./apply_one views.sql
